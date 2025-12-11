@@ -1,21 +1,16 @@
 ﻿import { useEffect, useState } from 'react';
 
-const Home = () => {
+function Home() {
   const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    document.title = 'Portafolio DigitalEvolution';
-  }, []);
-
+  useEffect(() => { document.title = 'Portafolio'; }, []);
+  
   return (
     <div>
-      <h2>Bienvenido a DigitalEvolution S.A</h2>
-      <p>Somos un equipo de 4 desarrolladores especializados en soluciones web.</p>
-      <button onClick={() => setCount(count + 1)}>Contador: {count}</button>
-      <p> useState usado</p>
-      <p> useEffect usado</p>
+      <h1>DigitalEvolution S.A</h1>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count + 1)}>+1</button>
     </div>
   );
-};
+}
 
 export default Home;
